@@ -2,8 +2,9 @@
 
 from bs4 import BeautifulSoup
 import requests
+import logging
 
-def get_links_from_uri(uri,domain,log):
+def get_links_from_uri(uri: str,domain: str,log: logging.logger) -> list:
     '''Find links at uri from a specified domain
     
     Parameters
