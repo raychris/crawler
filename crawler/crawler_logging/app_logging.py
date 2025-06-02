@@ -5,7 +5,7 @@ import logging
 import logging.config
 import os.path
 
-from crawler.logging.logging_config import logging_config
+from crawler.crawler_logging.logging_config import logging_config
 
 def enableLogging():
     '''Return a log object after setting up a logger'''

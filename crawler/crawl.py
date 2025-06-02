@@ -1,6 +1,6 @@
 ''' drive the web crawling '''
 
-from crawler.logging.app_logging import enableLogging
+from crawler.crawler_logging.app_logging import enableLogging
 from crawler.argparsing.argparsing import getArguments
 from crawler.crawling.utilities import get_links_from_uri
 
