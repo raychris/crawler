@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "crawler"
+description = "a web crawler"
+readme = "README.md"
+authors = [
+    { name="Christopher Johnson", email="johnson.rchristopher@gmail.com" }
+]
+maintainers = [
+    { name="Christopher Johnson", email="johnson.rchristopher@gmail.com" }
+]
+requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha",
+    "Operating System :: POSIX :: Linux"
+]
+dependencies = [
+    "beautifulsoup4>=4.13",
+    "requests>=2.32"
+]
+dynamic = [
+    "version"
+]
+
+[project.urls]
+Repository = ""
+
+[project.scripts]
+crawl = "crawler.crawl:crawl"
+
+# extra instructions for hatchling
+[tool.hatch.build]
+exclude = [
+    ".github/",
+    "docs/"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["crawler"]
+
+[tool.hatch.version]
+path = "crawler/__init__.py"
+
+# ... other project metadata fields as specified in:
+#     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
