@@ -1,0 +1,32 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4 # clone the repo
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Build the package
+        run: |
+          echo "building package"
+          python3 -m pip install build
+          python3 -m build
+          ls -lh dist
+      - name: Do integration testing
+        run: |
+          echo "starting integration testing"
+          VERSION=`grep VERSION crawler/__init__.py`
+          echo $VERSION
+      - name: Deploy the package
+        run: |
+          echo "deploy crawler to a pypi pip repo"

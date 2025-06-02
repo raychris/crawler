@@ -36,3 +36,7 @@ The web crawling implementation is found in utilities/get_links_from_uri.  I use
 
 I chose to deliver this product as a package for the benefits that a more formal structure offers (versioning, ease of deployment (pip), automatically adding the executable to a user's bin, and various other metadata options).  This adds overhead but makes managing the codebase easier over the long term.
 
+In .github/workflows/build_deploy.yaml there is a skeleton of a GitHub actions CI/CD pipeline.  On a push to the main branch, the package is built, tested, and deployed.
+
+I wrote this package in VS Code with Ruff default rules for linting.
+
