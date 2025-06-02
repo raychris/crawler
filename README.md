@@ -4,7 +4,7 @@
 
 ## INSTALLATION
 
-`crawler` has been packaged according to specifications found in the pyproject.toml.  The `dist` directory contains a .whl file called crawler-0.1-py3-none-any.whl.
+`crawler` has been packaged according to specifications found in the pyproject.toml.  The `dist` directory contains a .whl file called crawler-0.1-py3-none-any.whl.  The dist directory is not checked in via git.  To create the .whl after cloning the repo, navigate to the top level directory of the cloned repo and execute `python -m build`.
 
 `crawler` has been tested on a machine running RHEL 8.
 
